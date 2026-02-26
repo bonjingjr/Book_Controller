@@ -1,1 +1,11 @@
 GET http://localhost:8080/api/books
+GET http://localhost:8080/api/books/1
+POST http://localhost:8080/api/books
+GET http://localhost:8080/api/books/search?title=java
+GET http://localhost:8080/api/books/price-range?minPrice=30&maxPrice=50
+GET http://localhost:8080/api/books/sorted?sortBy=price&order=asc
+PUT http://localhost:8080/api/books/1
+PATCH http://localhost:8080/api/books/1
+DELETE http://localhost:8080/api/books/1
+GET http://localhost:8080/api/books/paginated?page=0&size=5
+GET http://localhost:8080/api/books/filter?title=java&sortBy=price&order=asc&page=0&size=3
