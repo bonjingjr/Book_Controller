@@ -1,11 +1,9 @@
-GET http://localhost:8080/api/books
-GET http://localhost:8080/api/books/1
-POST http://localhost:8080/api/books
-GET http://localhost:8080/api/books/search?title=java
-GET http://localhost:8080/api/books/price-range?minPrice=30&maxPrice=50
-GET http://localhost:8080/api/books/sorted?sortBy=price&order=asc
-PUT http://localhost:8080/api/books/1
-PATCH http://localhost:8080/api/books/1
-DELETE http://localhost:8080/api/books/1
-GET http://localhost:8080/api/books/paginated?page=0&size=5
-GET http://localhost:8080/api/books/filter?title=java&sortBy=price&order=asc&page=0&size=3
+| Endpoint | Screenshot |
+|---|---|
+| GET /api/books | ![GET all books](screenshots/get-all-books.png) |
+| POST /api/books | ![POST book](screenshots/post-book.png) |
+| PUT /api/books/1 | ![PUT book](screenshots/put-book.png) |
+| PATCH /api/books/1 | ![PATCH book](screenshots/patch-book.png) |
+| DELETE /api/books/1 | ![DELETE book](screenshots/delete-book.png) |
+| GET /api/books/paginated | ![Paginated](screenshots/paginated.png) |
+| GET /api/books/filter | ![Filter](screenshots/filter.png) |
