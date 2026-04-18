@@ -2,6 +2,7 @@ package com.example.webbackend.controller;
 
 import com.example.webbackend.entity.Book;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -178,4 +179,14 @@ public class BookController {
         books.removeIf(book -> book.getId().equals(id));
         return books;
     }
+
+    @DeleteMapping("/{id}")
+public ResponseEntity<?> deleteBook(@PathVariable String id) {
+    if (!bookRepository.existsById(id)) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body("Book not found with id: " + id);
+    }
+    bookRepository.deleteById(id);
+    return ResponseEntity.ok("Book deleted successfully.");
+}
 }
